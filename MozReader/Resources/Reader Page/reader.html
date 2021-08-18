@@ -1,0 +1,25 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Readability.js" ></script>
+    <link href="./reader.css" rel="stylesheet">
+</head>
+<body style="visibility: hidden;">
+    %@
+</body>
+<script>
+    var article = new Readability(document).parse();
+    var body = document.querySelector("body")
+    var articleEl = document.createElement("article");
+    articleEl.innerHTML = article.content;
+    body.innerHTML = "";
+    body.appendChild(articleEl);
+    var heading = document.createElement("h1");
+    heading.innerHTML = article.title;
+    var byline = document.createElement("h4");
+    byline.style.fontStyle = "italic"
+    byline.innerHTML = article.byline;
+    
+    body.insertBefore(byline, body.childNodes[0]);
+    body.insertBefore(heading, body.childNodes[0]);
+    body.style.visibility = "visible";
+</script>

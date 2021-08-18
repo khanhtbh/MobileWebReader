@@ -10,9 +10,11 @@ import SwiftUI
 
 struct ArticleDetailView: View {
     
-    private var webViewController = WebViewController()
-    
     let article: Article
+    
+    @ObservedObject private var webViewController = MainWebViewController()
+    private var readerViewController = ReaderWebViewController()
+    @State private var readerMode = false
     
     init(article: Article) {
         self.article = article
@@ -20,8 +22,27 @@ struct ArticleDetailView: View {
     }
     
     var body: some View {
-        PresentableWebView(webView: webViewController.webView)
-            .navigationBarTitleDisplayMode(.inline)
+        if !readerMode {
+            PresentableWebView(webView: webViewController.webView)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                                            if readerViewController.articleContent.count == 0 {
+                                                readerViewController.articleContent = webViewController.articleContentHtml
+                                            }
+                                            readerMode = true
+                                        }, label: {
+                                            Text("Reader").font(.subheadline)
+                                        }).disabled(webViewController.articleContentHtml.count == 0))
+        } else {
+            PresentableWebView(webView: readerViewController.webView)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                                            readerMode = false
+                                        }, label: {
+                                            Text("Return").font(.subheadline)
+                                        }))
+        }
     }
-    
 }
