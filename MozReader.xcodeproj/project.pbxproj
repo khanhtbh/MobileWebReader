@@ -25,6 +25,7 @@
 		D3410CA826CD6BF50064B025 /* Readability.js in Resources */ = {isa = PBXBuildFile; fileRef = D3410CA626CD6BF50064B025 /* Readability.js */; };
 		D3410CAA26CD6C420064B025 /* reader.css in Resources */ = {isa = PBXBuildFile; fileRef = D3410CA926CD6C420064B025 /* reader.css */; };
 		D3410CAE26CD78D70064B025 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3410CAD26CD78D70064B025 /* Launch Screen.storyboard */; };
+		D3410CB126CD79180064B025 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410CB026CD79180064B025 /* NavigationLazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D3410CA626CD6BF50064B025 /* Readability.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Readability.js; sourceTree = "<group>"; };
 		D3410CA926CD6C420064B025 /* reader.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = reader.css; sourceTree = "<group>"; };
 		D3410CAD26CD78D70064B025 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D3410CB026CD79180064B025 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		D3410C8A26CD55020064B025 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D3410CAF26CD79020064B025 /* Helper */,
 				D3410C7C26CD54F10064B025 /* ContentView.swift */,
 				D3410C9526CD56890064B025 /* Article List */,
 				D3410C9A26CD5FEB0064B025 /* Article Detail */,
@@ -173,6 +176,14 @@
 				D3410CA526CD6BF50064B025 /* reader.html */,
 			);
 			path = "Reader Page";
+			sourceTree = "<group>";
+		};
+		D3410CAF26CD79020064B025 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D3410CB026CD79180064B025 /* NavigationLazyView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 			files = (
 				D3410C9226CD55AB0064B025 /* InteractorProtocol.swift in Sources */,
 				D3410C7D26CD54F10064B025 /* ContentView.swift in Sources */,
+				D3410CB126CD79180064B025 /* NavigationLazyView.swift in Sources */,
 				D3410C7B26CD54F10064B025 /* MozReaderApp.swift in Sources */,
 				D3410CA126CD60BF0064B025 /* MainWebViewController.swift in Sources */,
 				D3410C9926CD58DB0064B025 /* ArticleList.swift in Sources */,

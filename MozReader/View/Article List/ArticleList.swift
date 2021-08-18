@@ -34,7 +34,7 @@ struct ArticleList: View {
     var body: some View {
         NavigationView {
             List(presentor.articleViewModels, id: \.id) { viewModel in
-                NavigationLink(destination: ArticleDetailView(article: viewModel.article)) {
+                NavigationLink(destination: NavigationLazyView(ArticleDetailView(article: viewModel.article))) {
                     ArticleRow(viewModel: viewModel)
                 }
             }.navigationTitle("News")

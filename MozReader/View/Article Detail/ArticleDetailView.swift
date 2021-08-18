@@ -25,24 +25,34 @@ struct ArticleDetailView: View {
         if !readerMode {
             PresentableWebView(webView: webViewController.webView)
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing:
-                                        Button(action: {
-                                            if readerViewController.articleContent.count == 0 {
-                                                readerViewController.articleContent = webViewController.articleContentHtml
-                                            }
-                                            readerMode = true
-                                        }, label: {
-                                            Text("Reader").font(.subheadline)
-                                        }).disabled(webViewController.articleContentHtml.count == 0))
+                .toolbar(content: {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: { [weak readerViewController] in
+                            if readerViewController?.articleContent.count == 0 {
+                                readerViewController?.articleContent = webViewController.articleContentHtml
+                            }
+                            readerMode = true
+                        }, label: {
+                            Text("Reader").font(.subheadline)
+                        }).disabled(webViewController.articleContentHtml.count == 0)
+                    }
+                })
         } else {
             PresentableWebView(webView: readerViewController.webView)
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing:
-                                        Button(action: {
-                                            readerMode = false
-                                        }, label: {
-                                            Text("Return").font(.subheadline)
-                                        }))
+                .toolbar(content: {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            readerMode = false
+                        }, label: {
+                            Text("Return").font(.subheadline)
+                        })
+                    }
+                })
         }
+    }
+    
+    private func updateReader() {
+        
     }
 }

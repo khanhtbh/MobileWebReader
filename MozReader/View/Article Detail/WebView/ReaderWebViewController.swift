@@ -48,4 +48,7 @@ class ReaderWebViewController: NSObject, WKNavigationDelegate {
         
     }
 
+    deinit {
+        print("Reader Web View Controller deinit")
+    }
 }

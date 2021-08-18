@@ -39,9 +39,13 @@ class MainWebViewController: NSObject, WKNavigationDelegate, ObservableObject {
         let script = """
             document.querySelector('article').outerHTML
         """
-        webView.evaluateJavaScript(script) { result, error in
+        webView.evaluateJavaScript(script) { [weak self] result, error in
             guard let result = result as? String, result.count > 0 else { return }
-            self.articleContentHtml = result
+            self?.articleContentHtml = result
         }
+    }
+    
+    deinit {
+        print("Main Web View Controller deinit")
     }
 }
