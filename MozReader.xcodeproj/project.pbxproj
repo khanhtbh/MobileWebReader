@@ -17,6 +17,9 @@
 		D3410C9426CD55C70064B025 /* ArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9326CD55C70064B025 /* ArticleInteractor.swift */; };
 		D3410C9726CD57770064B025 /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9626CD57770064B025 /* ArticleRow.swift */; };
 		D3410C9926CD58DB0064B025 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9826CD58DB0064B025 /* ArticleList.swift */; };
+		D3410C9C26CD600A0064B025 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9B26CD600A0064B025 /* ArticleDetailView.swift */; };
+		D3410C9F26CD60420064B025 /* PresentableWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9E26CD60420064B025 /* PresentableWebView.swift */; };
+		D3410CA126CD60BF0064B025 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410CA026CD60BF0064B025 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D3410C9326CD55C70064B025 /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
 		D3410C9626CD57770064B025 /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
 		D3410C9826CD58DB0064B025 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
+		D3410C9B26CD600A0064B025 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		D3410C9E26CD60420064B025 /* PresentableWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableWebView.swift; sourceTree = "<group>"; };
+		D3410CA026CD60BF0064B025 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			children = (
 				D3410C7C26CD54F10064B025 /* ContentView.swift */,
 				D3410C9526CD56890064B025 /* Article List */,
+				D3410C9A26CD5FEB0064B025 /* Article Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +132,24 @@
 				D3410C9826CD58DB0064B025 /* ArticleList.swift */,
 			);
 			path = "Article List";
+			sourceTree = "<group>";
+		};
+		D3410C9A26CD5FEB0064B025 /* Article Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D3410C9D26CD60310064B025 /* WebView */,
+				D3410C9B26CD600A0064B025 /* ArticleDetailView.swift */,
+			);
+			path = "Article Detail";
+			sourceTree = "<group>";
+		};
+		D3410C9D26CD60310064B025 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D3410C9E26CD60420064B025 /* PresentableWebView.swift */,
+				D3410CA026CD60BF0064B025 /* WebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +225,12 @@
 				D3410C9226CD55AB0064B025 /* InteractorProtocol.swift in Sources */,
 				D3410C7D26CD54F10064B025 /* ContentView.swift in Sources */,
 				D3410C7B26CD54F10064B025 /* MozReaderApp.swift in Sources */,
+				D3410CA126CD60BF0064B025 /* WebViewController.swift in Sources */,
 				D3410C9926CD58DB0064B025 /* ArticleList.swift in Sources */,
+				D3410C9C26CD600A0064B025 /* ArticleDetailView.swift in Sources */,
 				D3410C9426CD55C70064B025 /* ArticleInteractor.swift in Sources */,
 				D3410C8F26CD556A0064B025 /* Article.swift in Sources */,
+				D3410C9F26CD60420064B025 /* PresentableWebView.swift in Sources */,
 				D3410C9726CD57770064B025 /* ArticleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
