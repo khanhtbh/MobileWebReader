@@ -15,6 +15,8 @@
 		D3410C8F26CD556A0064B025 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C8E26CD556A0064B025 /* Article.swift */; };
 		D3410C9226CD55AB0064B025 /* InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9126CD55AB0064B025 /* InteractorProtocol.swift */; };
 		D3410C9426CD55C70064B025 /* ArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9326CD55C70064B025 /* ArticleInteractor.swift */; };
+		D3410C9726CD57770064B025 /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9626CD57770064B025 /* ArticleRow.swift */; };
+		D3410C9926CD58DB0064B025 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3410C9826CD58DB0064B025 /* ArticleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D3410C8E26CD556A0064B025 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D3410C9126CD55AB0064B025 /* InteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocol.swift; sourceTree = "<group>"; };
 		D3410C9326CD55C70064B025 /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
+		D3410C9626CD57770064B025 /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
+		D3410C9826CD58DB0064B025 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				D3410C7C26CD54F10064B025 /* ContentView.swift */,
+				D3410C9526CD56890064B025 /* Article List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +116,15 @@
 				D3410C9326CD55C70064B025 /* ArticleInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D3410C9526CD56890064B025 /* Article List */ = {
+			isa = PBXGroup;
+			children = (
+				D3410C9626CD57770064B025 /* ArticleRow.swift */,
+				D3410C9826CD58DB0064B025 /* ArticleList.swift */,
+			);
+			path = "Article List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +200,10 @@
 				D3410C9226CD55AB0064B025 /* InteractorProtocol.swift in Sources */,
 				D3410C7D26CD54F10064B025 /* ContentView.swift in Sources */,
 				D3410C7B26CD54F10064B025 /* MozReaderApp.swift in Sources */,
+				D3410C9926CD58DB0064B025 /* ArticleList.swift in Sources */,
 				D3410C9426CD55C70064B025 /* ArticleInteractor.swift in Sources */,
 				D3410C8F26CD556A0064B025 /* Article.swift in Sources */,
+				D3410C9726CD57770064B025 /* ArticleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
